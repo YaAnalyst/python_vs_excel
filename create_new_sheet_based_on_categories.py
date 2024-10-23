@@ -1,6 +1,6 @@
 import openpyxl
 
-data = openpyxl.load_workbook('Users/yana/online_retail.xlsx')
+data = openpyxl.load_workbook('online_retail.xlsx')
 sheet = data.active
 
 # Dictionary to store data by country
@@ -30,4 +30,4 @@ for country, data_list in country_data.items():
         new_sheet.cell(row=idx, column=2, value=quantity)
 
 # Save the updated workbook with new sheets
-data.save('Users/yana/sales_data_by_country_2.xlsx')
+data.save('sales_data_by_country_2.xlsx')
